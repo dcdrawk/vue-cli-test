@@ -24,12 +24,24 @@ module.exports = {
   // }
 
   /**
-   * Configure Webpack
+   * Configure Webpack (error)
+   * produces TypeError: arguments[i].apply is not a function
+   */
+  // configureWebpack: {
+  //   plugins: [
+  //     new webpack.EnvironmentPlugin(['FOO'])
+  //   ]
+  // }
+
+  /**
+   * Configure Webpack (error)
    * produces TypeError: arguments[i].apply is not a function
    */
   configureWebpack: {
     plugins: [
-      new webpack.EnvironmentPlugin(['FOO'])
+      new webpack.EnvironmentPlugin({
+        FOO: 'BAR'
+      })
     ]
   }
 }
