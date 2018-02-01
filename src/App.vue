@@ -8,6 +8,15 @@
   </div>
 </template>
 
+<script>
+export default {
+  mounted () {
+    console.log('app mounted...')
+    console.log(process.env.FOO)
+  }
+}
+</script>
+
 <style>
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
